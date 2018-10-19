@@ -1,13 +1,14 @@
 require("dotenv").config();
-process.argv.splice(0,2);
+
 let keys = require("./keys.js")
 let fs = require("fs");
 let Spotify = require('node-spotify-api');
 let spotify = new Spotify(keys.spotify);
 let request = require("request");
-let liriReturn = process.argv.shift();
-let artistName = process.argv.join(" ");
-let movieName = process.argv.join(" ");
+let moment = require("moment")
+let liriReturn = process.argv[2];
+let liriReturn2 = process.argv.slice(3);
+
 
 
 switch (liriReturn) {
@@ -75,7 +76,7 @@ function spotifyThisSong(trackName) {
 function movieThis() {
 
     //using movieName from var list at top
-    var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy";
+    var queryUrl = "http://www.omdbapi.com/?t=" + liriReturn2 + "&y=&plot=short&apikey=trilogy";
 
     request(queryUrl, function (error, response, body) {
 
@@ -123,23 +124,23 @@ function doWhatItSays() {
 //command 4 concert this
 function concertThis() {
 
-// run a request to the BandsInTown API with the Artist specified
-    //using artistName from let list at top
-    var queryUrl = "https://rest.bandsintown.com/artists/" + artistName + "/events?/app_id=codingbootcamp"
-console.log(queryUrl);
+    //using artistName from var list at top
+    var queryUrl = "https://rest.bandsintown.com/artists/" + liriReturn2 + "/events?app_id=279042a3fcff6518db5d989b05a8e5a0"
+
+    console.log(queryUrl);
     request(queryUrl, function (error, response, body) {
-    console.log(response.statusCode);
+        console.log(response.statusCode);
         // If the request is successful
         if (!error && response.statusCode === 200) {
 
             //pull requested data in readable format
-            var myArtistData = JSON.parse(body);
-            var queryUrlResults = 
-            "Name:" + myArtistData.venue.name + "\n" +
-            "Region:" + myArtistData.venue.region + "\n" +
-            "City:" + myArtistData.venue.city + "\n"             
-        
-            console.log(queryUrl)
+            const Events = JSON.parse(body);
+            var queryUrlResults =
+                Events.forEach(event => console.log(`Venue Name: ${event.venue.name}` +"\n", `Country: ${event.venue.country}`+"\n", `Region: ${event.venue.region}`+"\n", `City: ${event.venue.city}`+"\n", `Date/Time:  ${event.venue.datetimem}`+"\n"));
+
+
+
+
             console.log(queryUrlResults);
         } else {
             console.log("error:" + error);
