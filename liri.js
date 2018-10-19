@@ -136,7 +136,7 @@ function concertThis() {
             //pull requested data in readable format
             const Events = JSON.parse(body);
             var queryUrlResults =
-                Events.forEach(event => console.log(`Venue: ${event.venue.name}` +"\n", `Country: ${event.venue.country}`+"\n", `Region: ${event.venue.region}`+"\n", `City: ${event.venue.city}`+"\n", `Date:  ${moment(event.venue.datetime).format("MM/DD/YYYY")}` +"\n", "----------------------" ));
+                Events.forEach(event => console.log(`Venue: ${event.venue.name}` +"\n", `Country: ${event.venue.country}`+"\n", `Region: ${event.venue.region}`+"\n", `City: ${event.venue.city}`+"\n", `Date:  ${moment(event.datetime).format("MM/DD/YYYY")}` +"\n", "----------------------" ));
             
             
             
