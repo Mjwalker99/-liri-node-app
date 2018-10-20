@@ -15,5 +15,12 @@ This would be the output. ^
 
 So the first example is: 'spotify-this-song' and then any song title the user desires.
 
+<img width="325" alt="screen shot 2018-10-20 at 11 19 03 am" src="https://user-images.githubusercontent.com/40408849/47258749-77b5f900-d465-11e8-8b10-0d4358f2f725.png">
 
 ^ In this example the input was 'Thriller'.
+ 
+ If you were to type 'spotify-this-song'and leave the input empty, it would
+ display the default.
+ 
+ 
+ Example ^
