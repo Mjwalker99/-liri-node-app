@@ -13,7 +13,7 @@ To start, if you were to input 'node liri.js'
 This would be the output. ^
 
 
-So the first example is: 'spotify-this-song' and then any song title the user desires.
+So the first example which utilizes the Node-Spotify-Api is: 'spotify-this-song' and then any song title the user desires.
 
 <img width="325" alt="screen shot 2018-10-20 at 11 19 03 am" src="https://user-images.githubusercontent.com/40408849/47258749-77b5f900-d465-11e8-8b10-0d4358f2f725.png">
 
@@ -25,3 +25,11 @@ So the first example is: 'spotify-this-song' and then any song title the user de
  <img width="325" alt="screen shot 2018-10-20 at 12 46 47 pm" src="https://user-images.githubusercontent.com/40408849/47258799-4db10680-d466-11e8-98d7-09fdb68d429d.png">
  
  Example ^
+
+The next example which utilizes the OMDB API is 'movie-this and then any movie the user desires.
+
+
+
+In the example above the movie input was 'Up'.
+
+
