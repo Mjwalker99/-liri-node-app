@@ -30,7 +30,7 @@ switch (liriReturn) {
 
     // instructions for first-time user lurking around on the command line
     default: console.log("\n" + "type any command after 'node liri.js': " + "\n" +
-        "spotify-this-song 'any song title' " + "\n" +
+        "spotify-this-song 'any song title' "  + "\n" +
         "movie-this 'any movie title' " + "\n" +
         "do-what-it-says" + "\n" +
         "concert-this 'any artist' " + "\n")
@@ -42,7 +42,7 @@ switch (liriReturn) {
 function spotifyThisSong(trackName) {
     var trackName = process.argv[3];
     if (!trackName) {
-        trackName = "I Want It That Way";
+        trackName = "The Sign Ace of Base";
     };
     songRequest = trackName;
     spotify.search({
@@ -58,7 +58,8 @@ function spotifyThisSong(trackName) {
                             "Artist: " + trackInfo[i].artists[0].name + "\n" +
                             "Song: " + trackInfo[i].name + "\n" +
                             "Preview URL: " + trackInfo[i].preview_url + "\n" +
-                            "Album: " + trackInfo[i].album.name + "\n"
+                            "Album: " + trackInfo[i].album.name + "\n" +
+                            "-----------------------"
 
                         console.log(spotifyResults);
                         console.log(' ');
@@ -74,8 +75,9 @@ function spotifyThisSong(trackName) {
 //command 2 movie this
 // run a request to the OMDB API with the movie specified
 function movieThis() {
-
-    //using movieName from var list at top
+ 
+ 
+    //using liriReturn2 from var list at top
     var queryUrl = "http://www.omdbapi.com/?t=" + liriReturn2 + "&y=&plot=short&apikey=trilogy";
 
     request(queryUrl, function (error, response, body) {
@@ -109,8 +111,9 @@ function movieThis() {
 // It also adds the spotify command
 function doWhatItSays() {
 
-    fs.writeFile("random.txt", 'spotify-this-song,"I Want It That Way"', function (error) {
-        var song = "spotify-this-song 'I Want It That Way'"
+    fs.writeFile("random.txt", 'spotify-this-song,"The Sign Ace of Base" ', function (error) {
+        var song =  "spotify-this-song 'The Sign Ace of Base'"
+       
         // If the code experiences any errors it will log the error to the console.
         if (error) {
             return console.log(error);
@@ -118,13 +121,14 @@ function doWhatItSays() {
 
         // Otherwise, it will print:
         console.log(song);
+      
     });
 };
 
 //command 4 concert this
 function concertThis() {
 
-    //using artistName from var list at top
+    //using liriReturn2 from var list at top
     var queryUrl = "https://rest.bandsintown.com/artists/" + liriReturn2 + "/events?app_id=279042a3fcff6518db5d989b05a8e5a0"
 
     console.log(queryUrl);
