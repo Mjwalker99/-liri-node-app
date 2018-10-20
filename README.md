@@ -1,5 +1,7 @@
 # liri-node-app
 
+Link to Youtube video: https://www.youtube.com/watch?v=JeVWixiurYA&feature=youtu.be
+
 liri-node-app Is a node command line application that utilizes Node-Spotify-API, OMDB API and the Bands In Town API.
 
 It takes in a user input and displays data based on the keyword. 
