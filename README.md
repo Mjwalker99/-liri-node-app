@@ -13,7 +13,7 @@ To start, if you were to input 'node liri.js'
 This would be the output. ^
 
 
-So the first example which utilizes the Node-Spotify-Api is: 'spotify-this-song' and then any song title the user desires.
+So the first example which utilizes the Node-Spotify-Api is: 'spotify-this-song' and then any song title the user desires and grab the data for it.
 
 <img width="325" alt="screen shot 2018-10-20 at 11 19 03 am" src="https://user-images.githubusercontent.com/40408849/47258749-77b5f900-d465-11e8-8b10-0d4358f2f725.png">
 
@@ -26,10 +26,15 @@ So the first example which utilizes the Node-Spotify-Api is: 'spotify-this-song'
  
  Example ^
 
-The next example which utilizes the OMDB API is 'movie-this and then any movie the user desires.
+The next example which utilizes the OMDB API is 'movie-this and then any movie the user desires and grab the data for it.
 
-
+<img width="400" alt="screen shot 2018-10-20 at 11 20 16 am" src="https://user-images.githubusercontent.com/40408849/47259687-c61dc480-d472-11e8-926c-d2aa93a14137.png">
 
 In the example above the movie input was 'Up'.
 
+In this last example which we will be utilizing the Bands In Town API. 
+is 'concert-this' and then any music artist/band the user desires and grab the data for it.
 
+
+
+In the example above the artist input was drake
