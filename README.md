@@ -22,5 +22,6 @@ So the first example is: 'spotify-this-song' and then any song title the user de
  If you were to type 'spotify-this-song'and leave the input empty, it would
  display the default.
  
+ <img width="325" alt="screen shot 2018-10-20 at 12 46 47 pm" src="https://user-images.githubusercontent.com/40408849/47258799-4db10680-d466-11e8-98d7-09fdb68d429d.png">
  
  Example ^
